@@ -1,0 +1,15 @@
+# Optional settings for a site deployed at the domain root.
+# Merge inside the existing Baota-managed server block; keep its root, SSL and logs.
+# If equivalent locations already exist, edit those rather than duplicating them.
+
+location = /index.html {
+    add_header Cache-Control "no-cache";
+}
+
+location /assets/ {
+    try_files $uri =404;
+    expires 7d;
+}
+
+# Default Baota static hosting works with the hash router; no history fallback is needed.
+# For a subdirectory deployment, prefix the two locations with that directory.

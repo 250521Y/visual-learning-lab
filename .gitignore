@@ -1,0 +1,23 @@
+node_modules/
+dist/
+test-results/
+*.local
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated files and machine-specific settings
+coverage/
+playwright-report/
+deployment/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.npmrc
+.npm-cache/

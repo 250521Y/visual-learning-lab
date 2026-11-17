@@ -1,0 +1,47 @@
+{
+  "name": "visual-learning-lab",
+  "private": true,
+  "version": "1.0.0",
+  "description": "可视化导论双语交互课程：知识地图、D3 实验与学习进度反馈。",
+  "license": "MIT",
+  "author": "250521Y",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/250521Y/visual-learning-lab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/250521Y/visual-learning-lab/issues"
+  },
+  "homepage": "https://github.com/250521Y/visual-learning-lab#readme",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "build:baota": "node scripts/build-baota.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.js",
+    "test:browser": "node tests/browser.mjs",
+    "test:playground-http": "node tests/playground-http.mjs",
+    "test:a11y": "node tests/accessibility.mjs",
+    "format": "prettier --write src tests scripts vite.config.js",
+    "data:export": "node scripts/export-data.mjs"
+  },
+  "dependencies": {
+    "@codemirror/lang-javascript": "^6.2.4",
+    "@codemirror/view": "^6.38.6",
+    "codemirror": "^6.0.2",
+    "d3": "^7.9.0",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.56.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "prettier": "^3.9.10",
+    "vite": "^7.1.9"
+  }
+}
